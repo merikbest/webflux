@@ -8,7 +8,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-import java.util.HashMap;
+import java.util.Map;
 
 @Component
 public class GreetingHandler {
@@ -49,8 +49,6 @@ public class GreetingHandler {
 
         return ServerResponse
                 .ok()
-                .render("index", new HashMap<String, String>() {{
-                    put("user", user);
-                }});
+                .render("index", Map.of("user", user));
     }
 }
