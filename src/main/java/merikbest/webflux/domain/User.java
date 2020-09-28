@@ -16,7 +16,7 @@ import java.util.List;
 public class User implements UserDetails {
     @Id
     private Long id;
-    private String usrname;
+    private String username;
     @JsonIgnore
     private String password;
     private UserRole role;
@@ -28,7 +28,7 @@ public class User implements UserDetails {
 
     @Override
     public String getUsername() {
-        return usrname;
+        return username;
     }
 
     @Override
